@@ -3,11 +3,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Tahoma, Geneva, Verdana, sans-serif;
 }
 /*-----------------Tode root----------------*/
 :root{
-     --text-black-color: var(--text-black-color);
-     --text-white-color: var(--text-white-color);
+     --text-black-color: Black;
+     --text-white-color: white;
      --border-color: rgb(207, 203, 203);
      --format-color: red;
 
@@ -183,33 +184,56 @@ h2 {
 
 .skills-container {
     height: 100vh;
-    width: 80%;
+    width: 100%;
     margin:  0 auto;
     border: 2px dashed var(--format-color);
-    align-items: center;
-    justify-content: space-between;
-    text-wrap: wrap;
+    font-family: Tahoma, Geneva, Verdana, sans-serif;
+    display: inline-grid;
+}
+.skills-container h2 {
+    text-align: center;
+    margin: .2em 0;
+    color: var(--text-black-color);
+    font-size: 2.5rem;
 }
 
 .skills-list {
-    height: 100vh;
-    margin:  0 auto;
-    border: 2px dashed var(--format-color);
     display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    justify-content: center;
     align-items: center;
+    padding: 2em;
+}
+.skill-item {
+    width: fit-content;
+    display: flex;
+    padding: 1em;
+    gap: 1em;
+    place-items: center;
     justify-content: space-between;
-    text-wrap: wrap;
+    border: 2px solid var(--border-color);
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
-.light-button button.bt {
-    position: relative;
-    height: 200px;
-    display: flex;
-    align-items: flex-end;
-    outline: none;
-    background: none;
-    border: none;
-    cursor: pointer;
+.skill-item h3 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+.light-button {
+   display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 100px;
+    background-color: #0a0a0a;
+    border-radius: 5px;
+    color: #0f0f0f;
+    font-weight: 700;
+    transition: 300ms;
+    outline: #0f0f0f 2px solid;
+    outline-offset: 20;
 }
 
 .light-button button.bt .button-holder {
@@ -228,11 +252,11 @@ h2 {
     outline-offset: 20;
 }
 
-.light-button button.bt .button-holder svg {
+/*.light-button button.bt .button-holder svg {
     height: 50px;
     fill: #0f0f0f;
     transition: 300ms;
-}
+}*/
 
 .light-button button.bt .light-holder {
     position: absolute;
@@ -243,7 +267,7 @@ h2 {
     align-items: center;
 }
 
-.light-button button.bt .light-holder .dot {
+/*.light-button button.bt .light-holder .dot {
     position: absolute;
     top: 0;
     width: 10px;
@@ -270,10 +294,10 @@ h2 {
     color: rgba(88, 101, 242, 1);
     outline: rgba(88, 101, 242, 1) 2px solid;
     outline-offset: 2px;
-}
+}*/
 
-.light-button button.bt:hover .light-holder .light {
-    background: rgb(255, 255, 255);
+.light-button button.bt:hover .light-holder {
+    /*background: rgb(255, 255, 255);*/
     background: linear-gradient(180deg,
             rgba(88, 101, 242, 1) 0%,
             rgba(255, 255, 255, 0) 75%,
